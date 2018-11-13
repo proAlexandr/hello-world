@@ -1,24 +1,24 @@
-pipeline:
-  frontend_A:
-    image: node
-    commands:
-    - npm install
-    - npm run test:unit
-    
-  frontend_B:
-    image: node
-    group: installation
-    commands:
-    - npm install
-    - npm run test:unit    
-    
-  frontend_C:
-    image: node
-    group: installation
-    commands:
-    - npm install
-    - npm run test:unit      
-    
+kind: pipeline
+name: frontend
+
+steps:
+- name: build
+  image: node
+  commands:
+  - npm install
+  - npm test
+
+---
+kind: pipeline
+name: backend
+
+steps:
+- name: build
+  image: node
+  commands:
+  - npm install
+  - npm test
+
 services:
-  database:
-    image: mysql    
+- name: redis
+  image: redis
