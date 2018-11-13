@@ -1,5 +1,6 @@
 kind: pipeline
 name: frontend
+group: first
 
 steps:
 - name: build
@@ -7,6 +8,25 @@ steps:
   commands:
   - npm install
   - npm test
+  
+---  
+kind: pipeline
+name: iOS
+group: first
+
+steps:
+- name: build
+  image: node
+  commands:
+  - npm install
+  - npm test  
+  
+steps:
+- name: test
+  image: node
+  commands:
+  - npm install
+  - npm test  
 
 ---
 kind: pipeline
