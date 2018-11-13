@@ -9,6 +9,18 @@ steps:
   - npm install
   - npm test
   
+- name: build2
+  image: node
+  commands:
+  - npm install
+  - npm test
+  
+- name: build3
+  image: node
+  commands:
+  - npm install
+  - npm test  
+  
 ---  
 kind: pipeline
 name: iOS
