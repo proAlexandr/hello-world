@@ -2,7 +2,7 @@ kind: pipeline
 name: frontend
 
 steps:
-- name: build
+- name: very-very-very-very-very-very-very-very-very-long-step-name
   image: node
   commands:
   - npm install
