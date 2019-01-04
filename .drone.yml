@@ -8,7 +8,9 @@ steps:
   commands:
   - npm install
   - npm test
-  
+
+---  
+
 kind: pipeline
 name: стадия2
 group: first
