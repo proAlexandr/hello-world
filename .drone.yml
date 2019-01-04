@@ -13,7 +13,7 @@ steps:
 
 kind: pipeline
 name: стадия2
-group: first
+group: second
 
 steps:
 - name: build
