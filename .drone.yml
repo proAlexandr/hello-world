@@ -1,5 +1,5 @@
 kind: pipeline
-name: fRontend
+name: стадия1
 group: first
 
 steps:
@@ -8,3 +8,15 @@ steps:
   commands:
   - npm install
   - npm test
+  
+kind: pipeline
+name: стадия2
+group: first
+
+steps:
+- name: build
+  image: node
+  commands:
+  - npm install
+  - npm test
+
