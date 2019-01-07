@@ -16,7 +16,7 @@ name: стадия2
 group: second
 
 steps:
-- name: npm install
+- name: step1
   image: node
   commands:
   - npm install
