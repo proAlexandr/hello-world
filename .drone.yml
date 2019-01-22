@@ -4,12 +4,12 @@ group: first
 
 steps:
 - name: build
-  image: node
+  image: node:11.7.0-slim
   commands:
   - npm install
   - npm test
 
----  
+---
 
 kind: pipeline
 name: стадия2
@@ -17,8 +17,7 @@ group: second
 
 steps:
 - name: step1
-  image: node
+  image: node:11.7.0-slim
   commands:
-  - npm install
-  - npm test
+  - echo -e "\e[31mHello World\e[0m"
 
